@@ -1,0 +1,127 @@
+@charset 'utf-8';
+
+.trans {
+    // 左右滑动切换
+    &-slide {
+        &-enter {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: -100%;
+            top: 0;
+            &-to {
+                position: absolute;
+            width: 100%;
+            height: 100%;
+                left: 0;
+                top: 0;
+            }
+            &-active {
+                transition: all 0.5s;
+            }
+        }
+        &-leave {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            &-to {
+                position: absolute;
+            width: 100%;
+            height: 100%;
+                left: 100%;
+                top: 0;
+            }
+            &-active {
+                transition: all 0.5s;
+            }
+        }
+    }
+    // 上下滚动切换
+    &-scroll {
+        &-enter {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transform: translateY(100%);
+            // top: -100%;
+            // left: 0;
+            opacity: 0;
+            &-to {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                transform: translateY(-100%);
+                // top: 0;
+                // left: 0;
+                opacity: 1;
+            }
+            &-active {
+                transition: all 2s;
+            }
+        }
+        &-leave {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transform: translateY(0%);
+            // top: 0;
+            // left: 0;
+            opacity: 1;
+            &-to {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                transform: translateY(-100%);
+                // top: 100%;
+                // left: 0;
+                opacity: 0;
+            }
+            &-active {
+                transition: all 2s;
+            }
+        }
+    }
+    // 直升机式切换
+    &-helicopter {
+        &-enter {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            transform: rotate(-720deg);
+            transform-origin: 50% 50%;
+            opacity: 0;
+            &-to {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                transform: rotate(0deg);
+                transform-origin: 50% 50%;
+                opacity: 1;
+            }
+            &-active {
+                transition: all 3s;
+            }
+        }
+        &-leave {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 1;
+            transform: rotate(0deg);
+            transform-origin: 50% 50%;
+            &-to {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                transform: rotate(1080deg);
+                transform-origin: 50% 50%;
+                opacity: 0;
+            }
+            &-active {
+                transition: all 1s;
+            }
+        }
+    }
+}
