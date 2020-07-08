@@ -1,17 +1,23 @@
 <template>
   <div class="hello">
-    这里是首页
-    <router-link to='/ins'>ins页面直通车</router-link>
+    <router-view />
+    <dragball></dragball>
+    <footbar></footbar>
   </div>
 </template>
 
 <script>
+import Vue from 'vue'
+import footbar from '@/components/footbar'
+import dragball from '@/components/dragball'
+Vue.component('footbar',footbar)
+Vue.component('dragball',dragball)
 export default {
-  name: 'HelloWorld',
+  name: "HelloWorld",
   props: {
     msg: String
   }
-}
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

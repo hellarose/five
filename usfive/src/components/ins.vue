@@ -6,8 +6,7 @@
 
 <template>
     <div>
-        这里是ins页面
-    <router-link to='/'>回到首页</router-link>
+        这里是首页的部分
     </div>
 </template>
 

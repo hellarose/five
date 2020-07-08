@@ -5,8 +5,8 @@
 
 
 <template>
-    <div>
-        for test
+    <div class="zzdragball" style="position:fixed;right:10%;bottom:20%;">
+        <van-icon name="comment-o" />
     </div>
 </template>
 
