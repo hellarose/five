@@ -1,28 +1,34 @@
 <template>
   <div id="app">
-    <router-view />
+    <!-- <div id="nav">
+      <router-link to="/">Home</router-link> |
+      <router-link to="/about">About</router-link>
+    </div> -->
+    <router-view/>
   </div>
 </template>
 
-<script>
-/*rem布局事件操作函数*/
-function rem(){
-    let docel=document.documentElement
-    docel.style.fontSize=docel.clientWidth / 7.5 +'px'
+<style lang="scss">
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
 }
-rem()
-window.addEventListener('resize',rem,false)
-
-export default {
-  name: 'App',
-  mounted(){
-
-  },
+html,body,#app{
+  height: 100%;
 }
-</script>
+#nav {
+  padding: 30px;
 
-<style>
-@import './css/global.css';
-@import './css/transcartoon.css';
-/* 可以直接使用sass和less，下载好即可 */
+  a {
+    font-weight: bold;
+    color: #2c3e50;
+
+    &.router-link-exact-active {
+      color: #42b983;
+    }
+  }
+}
 </style>
