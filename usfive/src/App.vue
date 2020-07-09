@@ -1,14 +1,13 @@
 <template>
   <div id="app">
-    <!-- <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div> -->
     <router-view/>
   </div>
 </template>
 
 <style lang="scss">
+
+@import './css/global.css';
+@import './css/transcartoon.css';
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -32,3 +31,19 @@ html,body,#app{
   }
 }
 </style>
+<script>
+/*rem布局事件操作函数*/
+// function rem(){
+//     let docel=document.documentElement
+//     docel.style.fontSize=docel.clientWidth / 7.5 +'px'
+// }
+// rem()
+// window.addEventListener('resize',rem,false)
+
+export default {
+  name: 'App',
+  mounted(){
+
+  },
+}
+</script>

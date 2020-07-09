@@ -15,6 +15,32 @@ import SetPass from '../views/Set-new-pass.vue'
 import Message from '../views/Message.vue'
 import MessageDetail from '../views/Message-detail.vue'
 
+// csq
+import Sou from '@/components/csq/Sou'
+import Dan from '@/components/csq/Dan'
+import Bca from '@/components/csq/Bca'
+import Cc from '@/components/csq/Cc'
+import Tt from '@/components/csq/Tt'
+import Tta from '@/components/csq/Tta'
+import Ttb from '@/components/csq/Ttb'
+import Lianxi from "@/components/csq/Lianxi"
+// wyl
+import wyl from "@/components/wyl/course"
+
+// zz
+import Router from 'vue-router'
+import mainpart from '@/components/mainpart'
+import indexpart from '@/components/ins'
+import selfpart from '@/components/selfpart'
+import mylesson from '@/components/mylesson'
+import mymoney from '@/components/mymoney'
+
+// zjy
+import rili from '@/components/zjy/rili'
+import Zjy from '@/components/zjy/Zjy'
+import Yuyue from '@/components/zjy/Yuyue'
+import Xiangqing from '@/components/zjy/Xiangqing'
+
 Vue.use(VueRouter)
 
 const routes = [{
@@ -94,6 +120,96 @@ const routes = [{
     path: "/message-detail",
     name: "MessageDetail",
     component: MessageDetail
+  },
+  {
+    path:'csq',
+    name:'csqindex',
+    component: Sou,
+    children:[
+      {
+        path: '/dan',
+        component: Dan
+      },
+      {
+        path: '/bca',
+        component: Bca
+      },
+      {
+        path: '/cc',
+        component: Cc
+      },
+      {
+        path: '/tt',
+        component: Tt
+      },
+      {
+        path: '/tta',
+        component: Tta
+      },
+      {
+        path: '/ttb',
+        component: Ttb
+      },
+      {
+        path: '/lianxi',
+        component: Lianxi
+      }
+    ]
+  },
+  {
+    path:'/wyl',
+    name:'wylindex',
+    component:wyl,
+  },
+  {
+    path:'/zz',
+    name: 'mainpart',
+    component: mainpart,
+    children:[
+      {
+        path: '/',
+        name: 'indexpart',
+        component: indexpart,
+      },
+      {
+        path: '/self',
+        name: 'selfpart',
+        component: selfpart,
+      }
+    ]
+  },
+  {
+    path:'/mylesson',
+    name: 'mylesson',
+    component: mylesson
+  },
+  {
+    path:'/mymoney',
+    name: 'mymoney',
+    component: mymoney
+  },
+  {
+    path:'/zjyindex',
+    name: 'rili',
+    component: rili,
+    children:[
+      {
+        path: '/zjy',
+        name: 'Zjy',
+        component: Zjy
+      },
+      {
+        path: '/yuyue',
+        name: 'Yuyue',
+        component: Yuyue
+      },
+      {
+        path: '/xiangqing',
+        name: 'Xiangqing',
+        component: Xiangqing
+      }
+    ]
+
   }
 ]
 

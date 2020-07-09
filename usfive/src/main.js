@@ -4,7 +4,7 @@ import router from './router'
 import store from './store'
 import axios from 'axios' // 引过来axios
 
-import "./common/rem"
+import "@/common/rem"
 
 
 // 引入vant
@@ -61,3 +61,17 @@ new Vue({
   store,
   render: h => h(App)
 }).$mount('#app')
+
+const setHtmlFontSize = () => {
+  const htmlDom = document.getElementsByTagName('html')[0];
+  let htmlWidth = document.documentElement.clientWidth || document.body.clientWidth;
+  if (htmlWidth >= 750) {
+    htmlWidth = 750;
+  }
+  if (htmlWidth <= 320) {
+    htmlWidth = 320;
+  }
+  htmlDom.style.fontSize = `${htmlWidth / 7.5}px`;
+};
+window.onresize = setHtmlFontSize;
+setHtmlFontSize();
