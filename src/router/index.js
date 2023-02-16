@@ -28,9 +28,9 @@ import Lianxi from "@/components/csq/Lianxi"
 import wyl from "@/components/wyl/course"
 
 // zz
-import Router from 'vue-router'
-import mainpart from '@/components/mainpart'
-import indexpart from '@/components/ins'
+// import Router from 'vue-router'
+// import mainpart from '@/components/mainpart'
+// import indexpart from '@/components/ins'
 import selfpart from '@/components/selfpart'
 import mylesson from '@/components/mylesson'
 import mymoney from '@/components/mymoney'
@@ -162,21 +162,9 @@ const routes = [{
     component:wyl,
   },
   {
-    path:'/zz',
-    name: 'mainpart',
-    component: mainpart,
-    children:[
-      {
-        path: '/',
-        name: 'indexpart',
-        component: indexpart,
-      },
-      {
-        path: '/self',
-        name: 'selfpart',
-        component: selfpart,
-      }
-    ]
+    path: '/self',
+    name: 'selfpart',
+    component: selfpart,
   },
   {
     path:'/mylesson',
