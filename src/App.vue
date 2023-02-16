@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <router-view/>
+    <layout />
   </div>
 </template>
 
@@ -39,8 +39,11 @@ html,body,#app{
 // }
 // rem()
 // window.addEventListener('resize',rem,false)
-
+import layout from '@/layout/index.vue'
 export default {
+  components:{
+    layout
+  },
   name: 'App',
   mounted(){
 
