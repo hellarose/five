@@ -4,6 +4,7 @@
     width: 100%;
     height: 100%;
     overflow: hidden;
+    position: relative;
 }
 </style>
 
@@ -11,13 +12,15 @@
   <div class="commonLayoutWrapper">
     <main><router-view  /></main>
     <footer><footBar /> </footer>
+    <dragball />
   </div>
 </template>
 
 <script>
 import footBar from '@/components/footbar'
+import dragball from '@/components/dragball'
 export default {
-    components:{footBar},
+    components:{footBar,dragball},
     data(){return {}},
     computed:{},
     methods:{},
