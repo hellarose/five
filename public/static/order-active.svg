@@ -1,0 +1,11 @@
+<svg  xmlns='http://www.w3.org/2000/svg' version='1.1'
+    width='400' height='400'
+    viewbox='0 0 400 400'
+>
+    <path 
+        d='M200 0L 300 400 L0 50 L 400 50 L 100 400 z '
+        fill='white'
+        stroke='#1989fa'
+        stroke-width='10'
+    />
+</svg>

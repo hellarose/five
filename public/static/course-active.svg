@@ -1,0 +1,10 @@
+<svg width='500' height='500' xmlns='http://www.w3.org/2000/svg' version='1.1'
+    viewbox='0 0 400 400'
+>
+    <path 
+        d='M 10 10 L 390 390 L 10 390 L 390 10 '
+        fill='white'
+        stroke='#1989fa'
+        stroke-width='10'
+    />
+</svg>
